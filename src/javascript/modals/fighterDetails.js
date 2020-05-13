@@ -12,6 +12,8 @@ function createFighterDetails(fighter) {
 
   const fighterDetails = createElement({ tagName: 'div', className: 'modal-body' });
   const nameElement = createElement({ tagName: 'span', className: 'fighter-name' });
+  const attackElement = createElement({tagName: 'span', className: 'fighter-attack'})
+  const healthElement = createElement({tagName: 'span', className: 'fighter-health'});
   
   // show fighter name, attack, defense, health, image
 
