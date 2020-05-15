@@ -13,18 +13,17 @@ export function fight(firstFighter, secondFighter) {
 
     let damageForSecond = getDamage(firstFighter, secondFighter);
     secondHealth = secondHealth - damageForSecond;
+    console.log(secondFighter.name + ": left health: " + secondHealth);
 
     let damageForFirst = getDamage(secondFighter, firstFighter);
     firstHealth = firstHealth - damageForFirst;
-
+    console.log(firstFighter.name + ": left health: " + firstHealth);
   }
 }
 
 export function getDamage(attacker, enemy) {
-  // damage = hit - block
-  // return damage 
   const damage = getHitPower(attacker) - getBlockPower(enemy);
-  return damage;
+  return damage > 0 ? damage : 0;
 }
 
 export function getHitPower(fighter) {
@@ -39,5 +38,5 @@ export function getBlockPower(fighter) {
 
 // this function returning random number - 1 or 2;
 function chance(){
-  return 1 + Math.floor(Math.random() * Math.floor(2))
+  return 1 + Math.random()
 }

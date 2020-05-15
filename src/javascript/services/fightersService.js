@@ -12,8 +12,6 @@ export async function getFighters() {
 }
 
 export async function getFighterDetails(id) {
-  // endpoint - `details/fighter/${id}.json`;
-  //const result = await callApi('details/fighter/${id}.json');
   const result = await callApi('details/fighter/' + id + '.json');
   return result;
 }

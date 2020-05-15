@@ -10,8 +10,6 @@ export  function showFighterDetailsModal(fighter) {
 function createFighterDetails(fighter) {
   const { name, attack, health, source, defense } = fighter;
 
-  console.log(source);
-
   const fighterDetails = createElement({ tagName: 'div', className: 'modal-body' });
   const nameElement = createElement({ tagName: 'span', className: 'fighter-name' });
   const attackElement = createElement({tagName: 'span', className: 'fighter-attack'});
@@ -25,7 +23,7 @@ function createFighterDetails(fighter) {
   defenseElement.innerText = "Defense: " + defense + "\n\n\n";
   imageElement.src = source;
 
-  fighterDetails.append(nameElement, nameElement, attackElement, healthElement, defenseElement, imageElement);
+  fighterDetails.append(nameElement, attackElement, healthElement, defenseElement, imageElement);
 
   return fighterDetails;
 }
